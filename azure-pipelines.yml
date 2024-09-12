@@ -1,18 +1,1 @@
-trigger:
-- master
-
-pool:
-  name: 'default'
-  vmImage: 'ubuntu-latest'
-
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '11'  # Match the version specified in JavaToolInstaller
-    jdkArchitectureOption: 'x64'  # Specify architecture if needed
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+ 
