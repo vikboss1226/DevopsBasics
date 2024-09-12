@@ -6,12 +6,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'  # Specify the JDK version you need
-    jdkArchitecture: 'x64'  # Specify architecture if needed
-    checkLatest: true  # Ensure you get the latest patch version
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
